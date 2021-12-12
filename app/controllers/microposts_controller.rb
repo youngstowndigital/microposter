@@ -1,5 +1,9 @@
 class MicropostsController < ApplicationController
-    def index
-        @microposts = Micropost.paginate(page: params[:page])
+    before_action :logged_in_user, only: [:create, :destroy]
+    
+    def create
+    end
+
+    def destroy
     end
 end
